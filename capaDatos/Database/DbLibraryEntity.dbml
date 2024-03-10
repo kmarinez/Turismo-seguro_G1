@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Turismo_Seguro" Class="DbLibraryEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.TD_CompraXExtra" Member="TD_CompraXExtras">
+    <Type Name="TD_CompraXExtra">
+      <Column Name="CompraXExtra_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Compra_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExtraOpcional_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TM_CompraSeguro_TD_CompraXExtra" Member="TM_CompraSeguro" ThisKey="Compra_ID" OtherKey="Compra_ID" Type="TM_CompraSeguro" IsForeignKey="true" />
+      <Association Name="TM_ExtraOpcional_TD_CompraXExtra" Member="TM_ExtraOpcional" ThisKey="ExtraOpcional_ID" OtherKey="ExtraOpcional_ID" Type="TM_ExtraOpcional" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Usuario" Member="TM_Usuarios">
+    <Type Name="TM_Usuario">
+      <Column Name="Usuario_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cliente_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Clave_Acceso" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Salt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_Usuario_TD_ComunicacionReclamacion" Member="TD_ComunicacionReclamacions" ThisKey="Usuario_ID" OtherKey="Usuario_ID" Type="TD_ComunicacionReclamacion" />
+      <Association Name="TM_Cliente_TM_Usuario" Member="TM_Cliente" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_Cliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_ComunicacionReclamacion" Member="TD_ComunicacionReclamacions">
+    <Type Name="TD_ComunicacionReclamacion">
+      <Column Name="ComunicacionReclamacion_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Reclamacion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Usuario_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mensaje" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TM_Usuario_TD_ComunicacionReclamacion" Member="TM_Usuario" ThisKey="Usuario_ID" OtherKey="Usuario_ID" Type="TM_Usuario" IsForeignKey="true" />
+      <Association Name="TM_Reclamacion_TD_ComunicacionReclamacion" Member="TM_Reclamacion" ThisKey="Reclamacion_ID" OtherKey="Reclamacion_ID" Type="TM_Reclamacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_EstadoReclamacion" Member="TD_EstadoReclamacions">
+    <Type Name="TD_EstadoReclamacion">
+      <Column Name="EstadoReclamacion_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Detalle" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TD_EstadoReclamacion_TM_Reclamacion" Member="TM_Reclamacions" ThisKey="EstadoReclamacion_ID" OtherKey="EstadoReclamacion_ID" Type="TM_Reclamacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_Viajero" Member="TD_Viajeros">
+    <Type Name="TD_Viajero">
+      <Column Name="DetalleViajero_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cotizacion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Edad_Viajero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TD_Viajero_TM_Cliente" Member="TM_Clientes" ThisKey="DetalleViajero_ID" OtherKey="DetalleViajero_ID" Type="TM_Cliente" />
+      <Association Name="TD_Viajero_TM_DependienteCliente" Member="TM_DependienteClientes" ThisKey="DetalleViajero_ID" OtherKey="DetalleViajero_ID" Type="TM_DependienteCliente" />
+      <Association Name="TM_Cotizacion_TD_Viajero" Member="TM_Cotizacion" ThisKey="Cotizacion_ID" OtherKey="Cotizacion_ID" Type="TM_Cotizacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Asistencia" Member="TM_Asistencias">
+    <Type Name="TM_Asistencia">
+      <Column Name="Asistencia_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Pais_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoriaAsistencia_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreProfesional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="TM_CategoriaAsistencia_TM_Asistencia" Member="TM_CategoriaAsistencia" ThisKey="CategoriaAsistencia_ID" OtherKey="CategoriaAsistencia_ID" Type="TM_CategoriaAsistencia" IsForeignKey="true" />
+      <Association Name="TM_Pai_TM_Asistencia" Member="TM_Pai" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Pai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_CategoriaAsistencia" Member="TM_CategoriaAsistencias">
+    <Type Name="TM_CategoriaAsistencia">
+      <Column Name="CategoriaAsistencia_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_CategoriaAsistencia_TM_Asistencia" Member="TM_Asistencias" ThisKey="CategoriaAsistencia_ID" OtherKey="CategoriaAsistencia_ID" Type="TM_Asistencia" />
+      <Association Name="TM_CategoriaAsistencia_TM_ExtraOpcional" Member="TM_ExtraOpcionals" ThisKey="CategoriaAsistencia_ID" OtherKey="CategoriaAsistencia_ID" Type="TM_ExtraOpcional" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Cliente" Member="TM_Clientes">
+    <Type Name="TM_Cliente">
+      <Column Name="Cliente_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DetalleViajero_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreCliente" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ApellidoCliente" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NumeroTelefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Correo_Electronico" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_Cliente_TM_Usuario" Member="TM_Usuarios" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_Usuario" />
+      <Association Name="TM_Cliente_TM_DependienteCliente" Member="TM_DependienteClientes" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_DependienteCliente" />
+      <Association Name="TM_Cliente_TM_GestionPoliza" Member="TM_GestionPolizas" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_GestionPoliza" />
+      <Association Name="TD_Viajero_TM_Cliente" Member="TD_Viajero" ThisKey="DetalleViajero_ID" OtherKey="DetalleViajero_ID" Type="TD_Viajero" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Cobertura" Member="TM_Coberturas">
+    <Type Name="TM_Cobertura">
+      <Column Name="Cobertura_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TM_Cobertura_TM_CompraSeguro" Member="TM_CompraSeguros" ThisKey="Cobertura_ID" OtherKey="Cobertura_ID" Type="TM_CompraSeguro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_CompraSeguro" Member="TM_CompraSeguros">
+    <Type Name="TM_CompraSeguro">
+      <Column Name="Compra_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cotizacion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cobertura_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TM_CompraSeguro_TD_CompraXExtra" Member="TD_CompraXExtras" ThisKey="Compra_ID" OtherKey="Compra_ID" Type="TD_CompraXExtra" />
+      <Association Name="TM_CompraSeguro_TM_GestionPoliza" Member="TM_GestionPolizas" ThisKey="Compra_ID" OtherKey="Compra_ID" Type="TM_GestionPoliza" />
+      <Association Name="TM_Cobertura_TM_CompraSeguro" Member="TM_Cobertura" ThisKey="Cobertura_ID" OtherKey="Cobertura_ID" Type="TM_Cobertura" IsForeignKey="true" />
+      <Association Name="TM_Cotizacion_TM_CompraSeguro" Member="TM_Cotizacion" ThisKey="Cotizacion_ID" OtherKey="Cotizacion_ID" Type="TM_Cotizacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Cotizacion" Member="TM_Cotizacions">
+    <Type Name="TM_Cotizacion">
+      <Column Name="Cotizacion_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Pais_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Duracion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cantidad_Viajeros" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TM_Cotizacion_TD_Viajero" Member="TD_Viajeros" ThisKey="Cotizacion_ID" OtherKey="Cotizacion_ID" Type="TD_Viajero" />
+      <Association Name="TM_Cotizacion_TM_CompraSeguro" Member="TM_CompraSeguros" ThisKey="Cotizacion_ID" OtherKey="Cotizacion_ID" Type="TM_CompraSeguro" />
+      <Association Name="TM_Pai_TM_Cotizacion" Member="TM_Pai" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Pai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_DependienteCliente" Member="TM_DependienteClientes">
+    <Type Name="TM_DependienteCliente">
+      <Column Name="DependienteCliente_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cliente_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DetalleViajero_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_Cliente_TM_DependienteCliente" Member="TM_Cliente" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_Cliente" IsForeignKey="true" />
+      <Association Name="TD_Viajero_TM_DependienteCliente" Member="TD_Viajero" ThisKey="DetalleViajero_ID" OtherKey="DetalleViajero_ID" Type="TD_Viajero" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_DocumentosReclamacion" Member="TM_DocumentosReclamacions">
+    <Type Name="TM_DocumentosReclamacion">
+      <Column Name="DocumentosReclamacion_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Reclamacion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Archivo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_Reclamacion_TM_DocumentosReclamacion" Member="TM_Reclamacion" ThisKey="Reclamacion_ID" OtherKey="Reclamacion_ID" Type="TM_Reclamacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_ExtraOpcional" Member="TM_ExtraOpcionals">
+    <Type Name="TM_ExtraOpcional">
+      <Column Name="ExtraOpcional_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoriaAsistencia_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TM_ExtraOpcional_TD_CompraXExtra" Member="TD_CompraXExtras" ThisKey="ExtraOpcional_ID" OtherKey="ExtraOpcional_ID" Type="TD_CompraXExtra" />
+      <Association Name="TM_CategoriaAsistencia_TM_ExtraOpcional" Member="TM_CategoriaAsistencia" ThisKey="CategoriaAsistencia_ID" OtherKey="CategoriaAsistencia_ID" Type="TM_CategoriaAsistencia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_GestionPoliza" Member="TM_GestionPolizas">
+    <Type Name="TM_GestionPoliza">
+      <Column Name="Poliza_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cliente_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Compra_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Renovacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DocumentoPoliza" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Estatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_GestionPoliza_TM_Reclamacion" Member="TM_Reclamacions" ThisKey="Poliza_ID" OtherKey="Poliza_ID" Type="TM_Reclamacion" />
+      <Association Name="TM_Cliente_TM_GestionPoliza" Member="TM_Cliente" ThisKey="Cliente_ID" OtherKey="Cliente_ID" Type="TM_Cliente" IsForeignKey="true" />
+      <Association Name="TM_CompraSeguro_TM_GestionPoliza" Member="TM_CompraSeguro" ThisKey="Compra_ID" OtherKey="Compra_ID" Type="TM_CompraSeguro" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Pais" Member="TM_Pais">
+    <Type Name="TM_Pai">
+      <Column Name="Pais_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TM_Pai_TM_Asistencia" Member="TM_Asistencias" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Asistencia" />
+      <Association Name="TM_Pai_TM_Cotizacion" Member="TM_Cotizacions" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Cotizacion" />
+      <Association Name="TM_Pai_TM_Recomendacione" Member="TM_Recomendaciones" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Recomendacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Reclamacion" Member="TM_Reclamacions">
+    <Type Name="TM_Reclamacion">
+      <Column Name="Reclamacion_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Poliza_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstadoReclamacion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TM_Reclamacion_TD_ComunicacionReclamacion" Member="TD_ComunicacionReclamacions" ThisKey="Reclamacion_ID" OtherKey="Reclamacion_ID" Type="TD_ComunicacionReclamacion" />
+      <Association Name="TM_Reclamacion_TM_DocumentosReclamacion" Member="TM_DocumentosReclamacions" ThisKey="Reclamacion_ID" OtherKey="Reclamacion_ID" Type="TM_DocumentosReclamacion" />
+      <Association Name="TD_EstadoReclamacion_TM_Reclamacion" Member="TD_EstadoReclamacion" ThisKey="EstadoReclamacion_ID" OtherKey="EstadoReclamacion_ID" Type="TD_EstadoReclamacion" IsForeignKey="true" />
+      <Association Name="TM_GestionPoliza_TM_Reclamacion" Member="TM_GestionPoliza" ThisKey="Poliza_ID" OtherKey="Poliza_ID" Type="TM_GestionPoliza" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Recomendaciones" Member="TM_Recomendaciones">
+    <Type Name="TM_Recomendacione">
+      <Column Name="Recomendaciones_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Pais_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DetalleRecomendacion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TM_Pai_TM_Recomendacione" Member="TM_Pai" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Pai" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

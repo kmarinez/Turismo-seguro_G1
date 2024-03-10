@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,7 +9,17 @@
   <ItemGroup>
     <None Remove="Database\" />
   </ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Database\" />
+    <PackageReference Include="netstandard-System.Data.Linq" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Database\DbLibraryEntity.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DbLibraryEntity.designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>
