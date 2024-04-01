@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<capaDatos.Database.TurismoSeguroContext>(options =>
+    options.UseSqlServer("Server=localhost; Database=Turismo_Seguro; Trusted_Connection=True; TrustServerCertificate=True;"));
 
 var app = builder.Build();
 
@@ -22,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Seguridad}/{action=Login}/{id?}");
 
 app.Run();

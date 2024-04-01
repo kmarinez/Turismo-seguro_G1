@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewBag.Title = "Resumen Cotización";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <h1>Resumen Cotización</h1>
+    </header>
+
+    <div class="container">
+        <h2>Fechas Seleccionadas</h2>
+        <p>Fecha de Inicio: @ViewBag.FechaInicio</p>
+        <p>Fecha de Fin: @ViewBag.FechaFin</p>
+
+        <div class="cotizacion">
+            <div class="seguro-basico">
+                <h3>Seguro Básico:</h3>
+                <p>Incluye:</p>
+                <ul>
+                    <li>Seguro médico</li>
+                    <li>Reembolso por pérdida de equipaje</li>
+                    <li>Reembolso por cancelación de vuelo</li>
+                </ul>
+            </div>
+            <div class="resumen">
+                <h3>Resumen:</h3>
+                <p>Cantidad de personas: @ViewBag.CantidadPersonas</p>
+                <p>Cantidad de seguros: @ViewBag.CantidadSeguros</p>
+                <p>Días: @ViewBag.Dias</p>
+                <p>TOTAL: RD$ @ViewBag.Total</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <button class="btn btn-primary float-end">Siguiente</button>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

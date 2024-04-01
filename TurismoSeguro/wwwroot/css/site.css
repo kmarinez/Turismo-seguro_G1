@@ -1,18 +1,53 @@
-html {
-  font-size: 14px;
+/* Estilos específicos para la página de cotización de seguros de viaje */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.imagen {
+    width: 50%;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .imagen img {
+        max-width: 100%;
+    }
+
+.formulario {
+    width: 40%;
 }
 
-body {
-  margin-bottom: 60px;
+    .formulario h2 {
+        margin-bottom: 20px;
+    }
+
+    .formulario form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .formulario label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .formulario select, .formulario input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .formulario button {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+footer {
+    position: unset!important;
 }

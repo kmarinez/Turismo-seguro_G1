@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="imagen">
+            <img src="viajes_seguros.jpg" alt="Viajes Seguros">
+        </div>
+        <div class="formulario">
+            <h2>Obtén tu cotización de seguro de viaje</h2>
+            <form action="#">
+                <label for="pais">País de Destino:</label>
+                <select name="pais" id="pais">
+                    <option value="EEUU">Estados Unidos</option>
+                    <option value="España">España</option>
+                    <option value="Francia">Francia</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio">
+                <label for="fecha_fin">Fecha de Fin:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin">
+                <label for="cantidad_personas">Cantidad de Personas:</label>
+                <input type="number" id="cantidad_personas" name="cantidad_personas" min="1">
+                <button type="submit" class="btn-cotizar">Cotizar</button>
+            </form>
+        </div>
+    </div>
+    @* Scripts, si es necesario *@
+</body>
