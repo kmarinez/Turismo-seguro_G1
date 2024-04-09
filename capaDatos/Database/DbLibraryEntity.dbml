@@ -179,4 +179,28 @@
       <Association Name="TM_Pai_TM_Recomendacione" Member="TM_Pai" ThisKey="Pais_ID" OtherKey="Pais_ID" Type="TM_Pai" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.vw_Usuarios" Member="vw_Usuarios">
+    <Type Name="vw_Usuario">
+      <Column Name="codUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nomUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EstatusUsuario" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PerfilUsuario" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="EstatusLogin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_OperacionSistema" Member="TM_OperacionSistemas">
+    <Type Name="TM_OperacionSistema">
+      <Column Name="OperacionSist_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Operacion_URL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DescripcionOp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="fechaCreado" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fechaModificado" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fechaCancelado" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="creadoPor" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="modificadoPor" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="canceladoPor" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="flagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="comentario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

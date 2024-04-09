@@ -1,0 +1,79 @@
+﻿@model capaModelo.View_Model.VMOperaciones
+@{
+    ViewData["Title"] = "MantenimientoTablas";
+}
+
+<h1>Mantenimiento de Tablas Operacionales</h1>
+<div class="panel panel-default" id="panelTablas">
+    <div class="panel panel-heading" style="text-align: center;"></div>
+    <div class="panel panel-body">
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <label>Descripción:</label>
+                <input type="text" name="txtDescripcion" class="form-control " placeholder="Introduzca descripcion" id="txtDescripcion" />
+            </div>
+            <div class="col-lg-4">
+                <label>URLs:</label>
+                <input type="text" name="txtUrls" class="form-control" placeholder="Introduzca la URL /controller/action" id="txtUrls" />
+            </div>
+            <div class="col-lg-4" style="padding:initial;">
+                <br />
+                <a class="btn btn-primary btnSave" style="width: 25% "> Guardar </a>
+                <a class="btn btn-primary btnEdit" style="width: 25%; display:none;"> Editar</a>
+            </div>
+            <table class="table table-responsive" id="tblmantenimientos">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Descripción</th>
+                        <th>URLS</th>
+                        <th>Creación</th>
+                        <th>Modificación</th>
+                        <th>Anulación</th>
+                        <th>Estatus</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.operaciones)
+                    {
+                        <tr class="table table-active" id="tblmantenimientos">
+                            <td>@item.OperacionSist_ID</td>
+                            <td>@item.DescripcionOp</td>
+                            <td>@item.Operacion_URL</td>
+                            <td>@item.fechaCreado</td>
+                            <td>@item.fechaModificado</td>
+                            <td>@item.fechaCancelado</td>
+                            @if (@item.flagActivo == true)
+                            {
+                                <td style="color:green;">Activo</td>
+                            }
+                            else
+                            {
+                                <td style="color:red;">Inactivo</td>
+                            }
+
+                        </tr>
+                    }
+            </table>
+        </div>
+    </div>
+</div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js" ></script>
+<script>
+    $(document).ready(() => {
+        $(".btnSave").on("click", () => {
+            $.post('/Mantenimiento/GuardarOperacion/', {
+                'descripcion': $("#txtDescripcion").val(), 'url': $("#txtUrls").val()
+            }).done((respuesta) => { 
+                $("#txtDescripcion").val("")
+
+                $("#txtUrls").val("")
+
+                alert(respuesta)
+            })
+        })
+    })
+</script>

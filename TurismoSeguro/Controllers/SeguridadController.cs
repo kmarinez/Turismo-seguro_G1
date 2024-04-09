@@ -1,17 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using capaNegocio.Acciones;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TurismoSeguro.Controllers
 {
     public class SeguridadController : Controller
     {
+        public AccionSeguridad accionSeguridad = new AccionSeguridad();
         public IActionResult Login()
         {
             return View();
         }
 
-        public ActionResult ClickLogin(string username = "", string password = "")
+        public ActionResult ClickLogin(string username, string password)
         {
-            return View("_UsuarioFinal"); // para retornar al perfil usuario
+            string vista = string.Empty;
+            if (accionSeguridad.AutenticacionUsuario(username, password))
+
+            {
+                vista = accionSeguridad.PerfilUsuario(username);
+            }
+            else
+            { 
+            
+            }
+            return View(vista); // para retornar al perfil usuario
         }
 
         public ActionResult _UsuarioFinal()

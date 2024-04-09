@@ -110,77 +110,77 @@
         <elementListCompartment Id="8a44c0d0-4128-41b9-b134-80658afed480" absoluteBounds="8.515, 8.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(18.75 : 11.1642976888021); (19.5 : 11.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(18.75 : 11.1642976888021); (19.5 : 11.1642976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Usuario/TM_Usuario_TD_ComunicacionReclamacion" />
       <nodes>
         <classShapeMoniker Id="3844106f-515e-4a3f-b097-a619c93ec73c" />
         <classShapeMoniker Id="8453141b-c7a8-48ee-a502-60d5785cbba8" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.75 : 6.09699625651042); (8.5 : 6.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.75 : 6.09699625651042); (8.5 : 6.09699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_CategoriaAsistencia/TM_CategoriaAsistencia_TM_Asistencia" />
       <nodes>
         <classShapeMoniker Id="6c834463-1b76-4c1b-acae-718ca1ce629f" />
         <classShapeMoniker Id="49354cbd-9484-4b96-a3dd-79817b162a53" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(16 : 11.2604484049479); (16.75 : 11.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(16 : 11.2604484049479); (16.75 : 11.2604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cliente/TM_Cliente_TM_Usuario" />
       <nodes>
         <classShapeMoniker Id="cc4d3f06-cdac-46f2-bebe-6748483193cc" />
         <classShapeMoniker Id="3844106f-515e-4a3f-b097-a619c93ec73c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.25 : 11.1931469726562); (13.7291666666667 : 11.1931469726562 : JumpStart); (13.8958333333333 : 11.1931469726562 : JumpEnd); (14 : 11.1931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(13.25 : 11.1931469726562); (14 : 11.1931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TD_Viajero/TD_Viajero_TM_Cliente" />
       <nodes>
         <classShapeMoniker Id="f49712ea-aa29-4aa7-8de0-ceecce6390ad" />
         <classShapeMoniker Id="cc4d3f06-cdac-46f2-bebe-6748483193cc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.25 : 8.19314697265625); (14 : 8.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(13.25 : 8.19314697265625); (14 : 8.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_CompraSeguro/TM_CompraSeguro_TD_CompraXExtra" />
       <nodes>
         <classShapeMoniker Id="4cf50350-64b9-4f39-969b-633908324bb9" />
         <classShapeMoniker Id="fb02c0e0-ade8-461e-8617-ce4e48ced721" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.5 : 3.81899251302083); (10.875 : 4.19399251302083); (10.875 : 8.19314697265625); (11.25 : 8.19314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.5 : 3.81899251302083); (10.875 : 4.19399251302083); (10.875 : 8.19314697265625); (11.25 : 8.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cobertura/TM_Cobertura_TM_CompraSeguro" />
       <nodes>
         <classShapeMoniker Id="963c134e-1047-4773-aa5d-6bba18f0d500" />
         <classShapeMoniker Id="4cf50350-64b9-4f39-969b-633908324bb9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.5 : 11.1931469726562); (11.25 : 11.1931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.5 : 11.1931469726562); (11.25 : 11.1931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cotizacion/TM_Cotizacion_TD_Viajero" />
       <nodes>
         <classShapeMoniker Id="e2ae4036-6f77-4b64-b643-24bf67df2dfd" />
         <classShapeMoniker Id="f49712ea-aa29-4aa7-8de0-ceecce6390ad" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.5 : 10.4369285109675); (10.9375 : 9.99942851096755); (10.9375 : 8.57097245898438); (11.25 : 8.57097245898438)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.5 : 10.4369285109675); (10.9375 : 9.99942851096755); (10.9375 : 8.57097245898438); (11.25 : 8.57097245898438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cotizacion/TM_Cotizacion_TM_CompraSeguro" />
       <nodes>
         <classShapeMoniker Id="e2ae4036-6f77-4b64-b643-24bf67df2dfd" />
         <classShapeMoniker Id="4cf50350-64b9-4f39-969b-633908324bb9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(16 : 10.25); (16.375 : 9.875); (16.375 : 8.26044840494792); (16.75 : 8.26044840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(16 : 10.25); (16.375 : 9.875); (16.375 : 8.26044840494792); (16.75 : 8.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cliente/TM_Cliente_TM_DependienteCliente" />
       <nodes>
         <classShapeMoniker Id="cc4d3f06-cdac-46f2-bebe-6748483193cc" />
         <classShapeMoniker Id="fa7b6804-d8ba-4cb9-8d53-d20b3eead789" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.25 : 10.5); (13.625 : 10.125); (13.625 : 9.52089680989583); (13.7291666666667 : 9.52089680989583 : JumpStart); (13.8958333333333 : 9.52089680989583 : JumpEnd); (16.375 : 9.52089680989583); (16.75 : 9.14589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(13.25 : 10.5); (13.625 : 10.125); (13.625 : 9.52089680989583); (16.375 : 9.52089680989583); (16.75 : 9.14589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TD_Viajero/TD_Viajero_TM_DependienteCliente" />
       <nodes>
         <classShapeMoniker Id="f49712ea-aa29-4aa7-8de0-ceecce6390ad" />
         <classShapeMoniker Id="fa7b6804-d8ba-4cb9-8d53-d20b3eead789" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.25 : 5.19314697265625); (15 : 5.19314697265625); (15 : 7.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(13.25 : 5.19314697265625); (15 : 5.19314697265625); (15 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_ExtraOpcional/TM_ExtraOpcional_TD_CompraXExtra" />
       <nodes>
         <classShapeMoniker Id="0d3a46a1-f4d3-439a-aec6-9f82e4cd5bf4" />
@@ -194,68 +194,80 @@
         <classShapeMoniker Id="0d3a46a1-f4d3-439a-aec6-9f82e4cd5bf4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(15 : 12.2131982421875); (15 : 14.2315991210937); (16.75 : 14.2315991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(15 : 12.2131982421875); (15 : 14.2315991210937); (16.75 : 14.2315991210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Cliente/TM_Cliente_TM_GestionPoliza" />
       <nodes>
         <classShapeMoniker Id="cc4d3f06-cdac-46f2-bebe-6748483193cc" />
         <classShapeMoniker Id="f9f51634-3137-4d83-8e5a-02cfdd5f3b3d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.25 : 8.82444290775241); (13.8125 : 9.38694290775241); (13.8125 : 13.7095475605469); (14.9166666666667 : 13.7095475605469 : JumpStart); (15.0833333333333 : 13.7095475605469 : JumpEnd); (16.75 : 13.7095475605469)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(13.25 : 8.82444290775241); (13.8125 : 9.38694290775241); (13.8125 : 13.7095475605469); (16.75 : 13.7095475605469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_CompraSeguro/TM_CompraSeguro_TM_GestionPoliza" />
       <nodes>
         <classShapeMoniker Id="4cf50350-64b9-4f39-969b-633908324bb9" />
         <classShapeMoniker Id="f9f51634-3137-4d83-8e5a-02cfdd5f3b3d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.75 : 9.5); (8.125 : 9.125); (8.125 : 6.62384924934896); (8.5 : 6.62384924934896)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.75 : 9.5); (8.125 : 9.125); (8.125 : 6.62384924934896); (8.5 : 6.62384924934896)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Pai/TM_Pai_TM_Asistencia" />
       <nodes>
         <classShapeMoniker Id="1611aa0c-c541-4f34-aa10-2f2a606e345f" />
         <classShapeMoniker Id="49354cbd-9484-4b96-a3dd-79817b162a53" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.75 : 10.5344962565104); (8.5 : 10.5344962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.75 : 10.5344962565104); (8.5 : 10.5344962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Pai/TM_Pai_TM_Cotizacion" />
       <nodes>
         <classShapeMoniker Id="1611aa0c-c541-4f34-aa10-2f2a606e345f" />
         <classShapeMoniker Id="e2ae4036-6f77-4b64-b643-24bf67df2dfd" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(20.5 : 13.5); (20.5 : 11.9535953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(20.5 : 13.5); (20.5 : 11.9535953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Reclamacion/TM_Reclamacion_TD_ComunicacionReclamacion" />
       <nodes>
         <classShapeMoniker Id="74e6aaf6-ab14-4197-b257-348fbcaba087" />
         <classShapeMoniker Id="8453141b-c7a8-48ee-a502-60d5785cbba8" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(21.5 : 14.1931469726562); (22.25 : 14.1931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(21.5 : 14.1931469726562); (22.25 : 14.1931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Reclamacion/TM_Reclamacion_TM_DocumentosReclamacion" />
       <nodes>
         <classShapeMoniker Id="74e6aaf6-ab14-4197-b257-348fbcaba087" />
         <classShapeMoniker Id="112c236c-31a8-4ee2-8ab1-1ca252c600bc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.75 : 15.7348453776042); (20.5 : 15.7348453776042); (20.5 : 14.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(13.75 : 15.7348453776042); (20.5 : 15.7348453776042); (20.5 : 14.8862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TD_EstadoReclamacion/TD_EstadoReclamacion_TM_Reclamacion" />
       <nodes>
         <classShapeMoniker Id="53e66fd8-5276-4b7e-b2fd-6e733d74e8d3" />
         <classShapeMoniker Id="74e6aaf6-ab14-4197-b257-348fbcaba087" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(18.75 : 14.1931469726562); (19.5 : 14.1931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(18.75 : 14.1931469726562); (19.5 : 14.1931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_GestionPoliza/TM_GestionPoliza_TM_Reclamacion" />
       <nodes>
         <classShapeMoniker Id="f9f51634-3137-4d83-8e5a-02cfdd5f3b3d" />
         <classShapeMoniker Id="74e6aaf6-ab14-4197-b257-348fbcaba087" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.7187475 : 9.5); (6.7187475 : 8.7812475); (8.04166666666667 : 8.7812475 : JumpStart); (8.20833333333333 : 8.7812475 : JumpEnd); (8.5 : 8.7812475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.7187475 : 9.5); (6.7187475 : 8.7812475); (8.04166666666667 : 8.7812475 : JumpStart); (8.20833333333333 : 8.7812475 : JumpEnd); (8.5 : 8.7812475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DbLibraryEntityDataContext/TM_Pai/TM_Pai_TM_Recomendacione" />
       <nodes>
         <classShapeMoniker Id="1611aa0c-c541-4f34-aa10-2f2a606e345f" />
         <classShapeMoniker Id="5d7223e4-204d-4216-b314-db654529c16a" />
       </nodes>
     </associationConnector>
+    <classShape Id="f928d26c-745c-4e99-963b-cdc29aa3e03c" absoluteBounds="5.75, 2.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbLibraryEntityDataContext/vw_Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03f8385f-a64d-42a9-82b1-1cb3036948f0" absoluteBounds="5.765, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbd44456-fc7c-4b79-ac5f-d231167bd70f" absoluteBounds="3.625, 1.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DbLibraryEntityDataContext/TM_OperacionSistema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05b41b9b-4984-4bb4-8a5f-e268f7dfc515" absoluteBounds="3.64, 2.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

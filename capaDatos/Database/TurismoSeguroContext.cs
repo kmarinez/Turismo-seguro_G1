@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace capaDatos.Database;
 
-public partial class TurismoSeguroContext : DbContext
+public partial class 
+    TurismoSeguroContext : DbContext
 {
     public TurismoSeguroContext()
     {
